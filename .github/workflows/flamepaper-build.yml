@@ -35,6 +35,11 @@ jobs:
         java-version: ${{ matrix.java }}
         distribution: 'temurin'
 
+    - name: Setup build dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y maven
+
     # The corresponding dependencies are stored in the cache to speed up the test.
     - name: Cache Maven Packages
       uses: actions/cache@v3
