@@ -25,6 +25,8 @@ jobs:
     # Checkout repository
     - name: Checkout Repository
       uses: actions/checkout@v3
+      with:
+        repository: 2lstudios-mc/FlamePaper
 
     # Setup a version of the Java JDK
     - name: Setup JAVA ${{ matrix.java }}
